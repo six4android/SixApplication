@@ -72,9 +72,6 @@ public class GameScreenOptions implements Screen {
         button2 = new TextButton("Home", textButtonStyle);
         button3 = new TextButton("Volume", textButtonStyle);
 
-        //button.setWidth(Gdx.graphics.getWidth()/3);
-        //button.setHeight(Gdx.graphics.getHeight()/6);
-        //button.setPosition((Gdx.graphics.getWidth()/2) - button.getWidth()/2,(Gdx.graphics.getHeight()/2) - button.getHeight()/2);
         button.setPosition(500,1300,1);
         button1.setPosition(500,1100,1);
         button2.setPosition(500,900,1);
@@ -94,13 +91,20 @@ public class GameScreenOptions implements Screen {
                 return true;
             }
         });
+        button1.addListener(new InputListener(){
+            @Override
+            public boolean touchDown(InputEvent event, float x, float y, int pointer, int button){
+                game.setScreen(new GameScreen(game));
+                return true;
+            }
+        });
 
         batch = new SpriteBatch();
     }
 
     @Override
     public void render(float delta) {
-        Gdx.gl.glClearColor(1, 1, 2, 1);
+        Gdx.gl.glClearColor(0, 0, 0, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         batch.begin();
         stage.draw();

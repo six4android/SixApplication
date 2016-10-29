@@ -65,20 +65,15 @@ public class ChallengeScreen implements Screen {
         textButtonStyle.down = skin.getDrawable("buttonpressed");
         textButtonStyle.font = font;
 
-        //button = new TextButton("Exit", textButtonStyle);
         button = new TextButton("Home", textButtonStyle);
         button1 = new TextButton("Obstacle Tile", textButtonStyle);
         button2 = new TextButton("Time Tile", textButtonStyle);
-        //button.setWidth(Gdx.graphics.getWidth()/3);
-        //button.setHeight(Gdx.graphics.getHeight()/6);
-        //button.setPosition((Gdx.graphics.getWidth()/2) - button.getWidth()/2,(Gdx.graphics.getHeight()/2) - button.getHeight()/2);
         button1.setPosition(500,1300,1);
         button2.setPosition(500,1100,1);
         button.setPosition(800,1800,1);
         stage.addActor(button);
         stage.addActor(button1);
         stage.addActor(button2);
-        //stage.addActor(button1);
         stage.addActor(label);
 
         Gdx.input.setInputProcessor(stage);
@@ -110,7 +105,7 @@ public class ChallengeScreen implements Screen {
 
     @Override
     public void render(float delta) {
-        Gdx.gl.glClearColor(1, 1, 2, 1);
+        Gdx.gl.glClearColor(0, 0, 0, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
         batch.begin();
         stage.draw();

@@ -10,7 +10,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class MyGdxGame extends Game {
 	public static final int V_WIDTH = 400;
-	public static final int V_HEIGHT = 200;
+	public static final int V_HEIGHT = 400;
 	public SpriteBatch batch;
 	Game game;
 

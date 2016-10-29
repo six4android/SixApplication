@@ -41,6 +41,7 @@ public class MainMenuScreen implements Screen {
     Label label;
     SpriteBatch batch;
 
+
     public MainMenuScreen (Game game){
         this.game = game;
         gamecam = new OrthographicCamera();
@@ -52,7 +53,7 @@ public class MainMenuScreen implements Screen {
 
     @Override
     public void render(float delta) {
-        Gdx.gl.glClearColor(1, 1, 2, 1);
+        Gdx.gl.glClearColor(0, 0, 0, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
         batch.begin();
@@ -94,9 +95,6 @@ public class MainMenuScreen implements Screen {
 
         button = new TextButton("Start Game", textButtonStyle);
         button1 = new TextButton("Challenge", textButtonStyle);
-        /*button.setWidth(Gdx.graphics.getWidth()/3);
-        button.setHeight(Gdx.graphics.getHeight()/6);
-        button.setPosition((Gdx.graphics.getWidth()/2) - button.getWidth()/2,(Gdx.graphics.getHeight()/2) - button.getHeight()/2); */
 
         button.setPosition(500,1000,1);
         button1.setPosition(500,800,1);
